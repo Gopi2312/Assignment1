@@ -61,7 +61,7 @@ class Account
 
     void withdraw() {
     	try {
-        System.out.print("Enter Withdraw Amount: ");
+        log.info("Enter Withdraw Amount: ");
         double withdrawamount = sc.nextDouble();
         if (withdrawamount > balance) {
             log.info("Your withdraw amount is greater than your balance!");
@@ -77,6 +77,6 @@ class Account
     }
 
     void balanceAmount() {
-        log.info("balance Amount: " +balance);
+        log.log(level.INFO,()->"balance Amount: " +balance);
     }
 }
